@@ -93,9 +93,6 @@ r=100
 # Event handler for slider
 def color_changed(new_intval):
     # Controller updates the view by pulling data from model
-    hexString= ('#' + \
-               hexstring(red_intvar) + \
-               hexstring(green_intvar) + '00\n')
     editor.insert(Tkinter.END, '#' + \
                                hexstring(red_intvar) + \
                                hexstring(green_intvar) + '00\n')
@@ -148,7 +145,7 @@ def hexstring(slider_intvar):
 
 c = c_intvar.get()
 circle_item = canvas.create_oval(x-r, y-r, x+r, y+r, 
-                                outline='#000000', fill= hexString)
+                                outline='#000000', fill= 'yellow')
 #######
 # Event Loop
 #######
